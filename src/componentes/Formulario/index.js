@@ -25,22 +25,22 @@ const Formulario = ({aoCadastrar, times}) => {
     return (
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
-                <h2>Preencha os dados para criar o card do colaborador.</h2>
+                <h2>Preencha os dados para criar o seu card de jogador.</h2>
                 <CampoTexto
                     obrigatorio={true}
-                    label='Nome'
-                    placeholder='Digite seu nome '
+                    label='NickName'
+                    placeholder='Digite seu nick... '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}/>
                 <CampoTexto
                     obrigatorio={true}
                     label='Função' 
-                    placeholder='Digite sua Função '
+                    placeholder='Digite sua Função... '
                     valor={funcao}
                     aoAlterado={valor => setFuncao(valor)}/>
                 <CampoTexto 
                     label='Imagem' 
-                    placeholder='Informe o endereço da imagem '
+                    placeholder='Informe o endereço da imagem... '
                     aoAlterado={valor => setImagem(valor)}/>
                 <ListaSuspensa 
                     obrigatorio={true}
