@@ -1,22 +1,18 @@
 
 import './rodape.css'
 
+
 const Rodape = () => {
     return (<footer className="footer">
        <section>
        <ul>
-            <li>
-                <a href="facebook.com" target="_blank">
-                    <img src="/imagens/facebook.png" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="twitter.com" target="_blank">
+           <li>
+                <a href="https://twitter.com/binoulder" target="_blank">
                     <img src="/imagens/twitter.png" alt="" />
                 </a>
             </li>
             <li>
-                <a href="instagram.com" target="_blank">
+                <a href="https://twitter.com/binoulder" target="_blank">
                     <img src="/imagens/instagram.png" alt="" />
                 </a>
             </li>
@@ -27,7 +23,7 @@ const Rodape = () => {
        </section>
        <section>
         <p>
-            Desenvolvido por Alura.
+            Desenvolvido pro Eduardo Reis Braga
         </p>
        </section>
     </footer>)
