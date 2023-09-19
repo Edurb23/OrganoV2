@@ -9,38 +9,38 @@ function App() {
   const [times, setTimes] = useState( [
     {
       nome: 'Rocket League',
-      corPrimaria: '#57C27B',
-      corSecundaria: '#d8f7e9',
+      cor: '#d8f7e9',
+      
     },
     {
       nome: 'Rainbow Six Siege',
-      corPrimaria: '#B2CFFA',
-      corSecundaria: '#E8F8FF',
+      cor: '#E8F8FF',
+      
     },
     {
       nome: 'Warzone',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F8E2',
+      cor: '#F0F8E2',
     },
+     
     {
       nome: 'Valorant',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8',
+      cor: '#FDE7E8',
+      
     },
     {
       nome: 'League of Legends',
-      corPrimaria: '#DB6EBF',
-      corSecundaria: '#FAE9F5',
+      cor: '#FAE9F5',
+      
     },
     {
       nome: 'Overwatch',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9',
+      cor: '#FFF5D9',
+      
     },
     {
       nome: 'Couter-Striker',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF',
+      cor: '#FFEEDF',
+      
     },
   ])
 
@@ -255,7 +255,7 @@ function App() {
   function mudarCorDoTime(cor, nome){
     setTimes(times.map(time => {
       if(time.nome === nome){
-        time.corSecundaria =cor;
+        time.cor = cor;
       }
       return time;
     }));

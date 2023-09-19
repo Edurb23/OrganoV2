@@ -23,7 +23,7 @@ const Rodape = () => {
        </section>
        <section>
         <p>
-            Desenvolvido pro Eduardo Reis Braga
+            Desenvolvido por Eduardo Reis Braga
         </p>
        </section>
     </footer>)
