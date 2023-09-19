@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
@@ -30,19 +30,19 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
                 <h2>Preencha os dados para criar o seu card de jogador.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='NickName'
                     placeholder='Digite seu nick... '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}/>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Função' 
                     placeholder='Digite sua Função... '
                     valor={funcao}
                     aoAlterado={valor => setFuncao(valor)}/>
-                <CampoTexto 
+                <Campo
                     label='Imagem' 
                     placeholder='Informe o endereço da imagem... '
                     aoAlterado={valor => setImagem(valor)}/>
@@ -62,14 +62,15 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                 })
             })}>
                 <h2>Preencha os dados para criar um novo Time.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite o nome do time... '
                     valor={nomeTime}
                     aoAlterado={valor => setnomeTime(valor)}/>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
+                    type='color'
                     label='Cor' 
                     placeholder='Digite a cor '
                     valor={corTime}
