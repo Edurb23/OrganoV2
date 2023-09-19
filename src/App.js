@@ -6,7 +6,7 @@ import Time from "./componentes/Time";
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState( [
     {
       nome: 'Rocket League',
       corPrimaria: '#57C27B',
@@ -42,7 +42,7 @@ function App() {
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF',
     },
-  ]
+  ])
 
   const inicial = [
     {
@@ -251,6 +251,14 @@ function App() {
   function deletarColaborador() {
     console.log('deletando colaborador');
   }
+
+  function mudarCorDoTime(cor, nome){
+    setTimes(times.map(time => {
+      if(time.nome === nome){
+        time.corSecundaria =cor;
+      }
+    }));
+  }
   return (
     <div>
       <Banner />
@@ -258,10 +266,12 @@ function App() {
       <section className="times">
         <h1>Times</h1>
         {times.map((time, indice) => 
-        <Time key={indice} time={time} 
-         colaboradores={colaboradores.filter(colaborador =>
-         colaborador.time === time.nome)}
-         aoDeletar={deletarColaborador}
+        <Time
+          mudarCor={mudarCorDoTime}
+          key={indice} time={time} 
+          colaboradores={colaboradores.filter(colaborador =>
+          colaborador.time === time.nome)}
+          aoDeletar={deletarColaborador}
          />)}
       </section>
       <Rodape />
