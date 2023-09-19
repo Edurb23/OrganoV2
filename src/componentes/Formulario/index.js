@@ -7,16 +7,16 @@ import './formulario.css'
 const Formulario = ({aoCadastrar, times}) => {
 
     const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [funcao, setFuncao] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
     const aoSubmeter = (evento) => {
         evento.preventDefault()
-        console.log('form enviado', nome, cargo, imagem, time )
+        console.log('form enviado', nome, funcao, imagem, time )
         aoCadastrar({
             nome,
-            cargo,
+            funcao,
             imagem,
             time
         })
@@ -25,22 +25,22 @@ const Formulario = ({aoCadastrar, times}) => {
     return (
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
-                <h2>Preencha os dados para criar o card do colaborador.</h2>
+                <h2>Preencha os dados para criar o seu card de jogador.</h2>
                 <CampoTexto
                     obrigatorio={true}
-                    label='Nome'
-                    placeholder='Digite seu nome '
+                    label='NickName'
+                    placeholder='Digite seu nick... '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}/>
                 <CampoTexto
                     obrigatorio={true}
-                    label='Cargo' 
-                    placeholder='Digite seu cargo '
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}/>
+                    label='Função' 
+                    placeholder='Digite sua Função... '
+                    valor={funcao}
+                    aoAlterado={valor => setFuncao(valor)}/>
                 <CampoTexto 
                     label='Imagem' 
-                    placeholder='Informe o endereço da imagem '
+                    placeholder='Informe o endereço da imagem... '
                     aoAlterado={valor => setImagem(valor)}/>
                 <ListaSuspensa 
                     obrigatorio={true}
