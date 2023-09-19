@@ -257,6 +257,7 @@ function App() {
       if(time.nome === nome){
         time.corSecundaria =cor;
       }
+      return time;
     }));
   }
   return (
